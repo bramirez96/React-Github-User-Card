@@ -1,0 +1,126 @@
+const users = [
+  {
+    login: "ToEndThePeace",
+    id: 7229865,
+    node_id: "MDQ6VXNlcjcyMjk4NjU=",
+    pic: "https://avatars2.githubusercontent.com/u/7229865?v=4",
+    gravatar_id: "",
+    url: "https://api.github.com/users/ToEndThePeace",
+    html_url: "https://github.com/ToEndThePeace",
+    followers_url: "https://api.github.com/users/ToEndThePeace/followers",
+    following_url:
+      "https://api.github.com/users/ToEndThePeace/following{/other_user}",
+    gists_url: "https://api.github.com/users/ToEndThePeace/gists{/gist_id}",
+    starred_url:
+      "https://api.github.com/users/ToEndThePeace/starred{/owner}{/repo}",
+    subscriptions_url:
+      "https://api.github.com/users/ToEndThePeace/subscriptions",
+    organizations_url: "https://api.github.com/users/ToEndThePeace/orgs",
+    repos_url: "https://api.github.com/users/ToEndThePeace/repos",
+    events_url: "https://api.github.com/users/ToEndThePeace/events{/privacy}",
+    received_events_url:
+      "https://api.github.com/users/ToEndThePeace/received_events",
+    type: "User",
+    site_admin: false,
+    name: "Brandon Ramirez",
+    company: null,
+    blog: "",
+    location: null,
+    email: null,
+    hireable: null,
+    bio: "Freelance Web Developer, Graphic Designer, and Photographer",
+    public_repos: 45,
+    public_gists: 0,
+    followers: 4,
+    following: 8,
+    created_at: "2014-04-08T18:54:39Z",
+    updated_at: "2020-05-06T15:28:52Z"
+  }
+];
+const followers = [
+  {
+  "login": "sadamexx",
+  "id": 53239359,
+  "node_id": "MDQ6VXNlcjUzMjM5MzU5",
+  "avatar_url": "https://avatars1.githubusercontent.com/u/53239359?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/sadamexx",
+  "html_url": "https://github.com/sadamexx",
+  "followers_url": "https://api.github.com/users/sadamexx/followers",
+  "following_url": "https://api.github.com/users/sadamexx/following{/other_user}",
+  "gists_url": "https://api.github.com/users/sadamexx/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/sadamexx/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/sadamexx/subscriptions",
+  "organizations_url": "https://api.github.com/users/sadamexx/orgs",
+  "repos_url": "https://api.github.com/users/sadamexx/repos",
+  "events_url": "https://api.github.com/users/sadamexx/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/sadamexx/received_events",
+  "type": "User",
+  "site_admin": false
+  },
+  {
+  "login": "shayne-smith",
+  "id": 34349978,
+  "node_id": "MDQ6VXNlcjM0MzQ5OTc4",
+  "avatar_url": "https://avatars0.githubusercontent.com/u/34349978?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/shayne-smith",
+  "html_url": "https://github.com/shayne-smith",
+  "followers_url": "https://api.github.com/users/shayne-smith/followers",
+  "following_url": "https://api.github.com/users/shayne-smith/following{/other_user}",
+  "gists_url": "https://api.github.com/users/shayne-smith/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/shayne-smith/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/shayne-smith/subscriptions",
+  "organizations_url": "https://api.github.com/users/shayne-smith/orgs",
+  "repos_url": "https://api.github.com/users/shayne-smith/repos",
+  "events_url": "https://api.github.com/users/shayne-smith/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/shayne-smith/received_events",
+  "type": "User",
+  "site_admin": false
+  },
+  {
+  "login": "Istott",
+  "id": 59525203,
+  "node_id": "MDQ6VXNlcjU5NTI1MjAz",
+  "avatar_url": "https://avatars2.githubusercontent.com/u/59525203?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/Istott",
+  "html_url": "https://github.com/Istott",
+  "followers_url": "https://api.github.com/users/Istott/followers",
+  "following_url": "https://api.github.com/users/Istott/following{/other_user}",
+  "gists_url": "https://api.github.com/users/Istott/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/Istott/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/Istott/subscriptions",
+  "organizations_url": "https://api.github.com/users/Istott/orgs",
+  "repos_url": "https://api.github.com/users/Istott/repos",
+  "events_url": "https://api.github.com/users/Istott/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/Istott/received_events",
+  "type": "User",
+  "site_admin": false
+  },
+  {
+  "login": "dreampoetlee",
+  "id": 22262765,
+  "node_id": "MDQ6VXNlcjIyMjYyNzY1",
+  "avatar_url": "https://avatars3.githubusercontent.com/u/22262765?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/dreampoetlee",
+  "html_url": "https://github.com/dreampoetlee",
+  "followers_url": "https://api.github.com/users/dreampoetlee/followers",
+  "following_url": "https://api.github.com/users/dreampoetlee/following{/other_user}",
+  "gists_url": "https://api.github.com/users/dreampoetlee/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/dreampoetlee/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/dreampoetlee/subscriptions",
+  "organizations_url": "https://api.github.com/users/dreampoetlee/orgs",
+  "repos_url": "https://api.github.com/users/dreampoetlee/repos",
+  "events_url": "https://api.github.com/users/dreampoetlee/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/dreampoetlee/received_events",
+  "type": "User",
+  "site_admin": false
+  }
+  ]
+
+export {
+  followers,
+  users
+};
