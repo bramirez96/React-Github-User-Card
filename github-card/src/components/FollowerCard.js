@@ -2,18 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const FollowerCard = (props) => {
-  const { url, login, avatar_url: pic } = props.follower;
+  const { setUrl } = props;
+  const { login, avatar_url: pic } = props.follower;
   return (
-    <StyledCard>
-      <a href={url}>
-        <img title={login} src={pic} alt="alt" />
-      </a>
+    <StyledCard
+      onClick={() => {
+        setUrl(login);
+      }}
+    >
+      <img title={login} src={pic} alt="alt" />
     </StyledCard>
   );
 };
 
 const StyledCard = styled.div`
   display: flex;
+  cursor: pointer;
   img {
     max-height: 8vh;
   }

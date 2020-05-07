@@ -10,15 +10,32 @@ import { users } from "./assets/data.js";
 class App extends React.Component {
   state = {
     searchField: "",
-    url: "https://api.github.com/users/ToEndThePeace",
+    url: "https://api.github.com/users/sadamexx",
     users: null
   };
   componentDidMount() {
+    this.fetchUser();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.searchField !== this.state.searchField) {
+      this.setUrl(this.state.searchField);
+    }
+    if (prevState.url !== this.state.url) {
+      this.fetchUser();
+    }
+  }
+  setUrl = (username) => {
+    this.setState({
+      url: `https://api.github.com/users/${username}`
+    });
+  };
+  fetchUser = () => {
     axios
       .get(this.state.url)
       .then((res) => {
         this.setState({
-          users: [{
+          users: [
+            {
               id: res.data.id,
               login: res.data.login,
               name: res.data.name,
@@ -30,20 +47,25 @@ class App extends React.Component {
         });
       })
       .catch((err) => {
-        debugger;
+        alert(`Error ${err.request.status}: User Not Found`);
       });
     // this.setState({
     //   users: users
     // });
-  }
-  componentDidUpdate() {}
-  componentWillUnmount() {}
+  };
+  setSearch = (value) => {
+    this.setState({
+      searchField: value
+    });
+  };
 
   render() {
     return (
       <StyledApp className="App">
-        <SearchBar />
-        {this.state.users && <UserList users={this.state.users} />}
+        <SearchBar setSearch={this.setSearch} />
+        {this.state.users && (
+          <UserList users={this.state.users} setUrl={this.setUrl} />
+        )}
       </StyledApp>
     );
   }
@@ -52,7 +74,7 @@ class App extends React.Component {
 const StyledApp = styled.div`
   width: 100%;
   min-height: 100%;
-  background-color: #FFFFCC;
+  background-color: #ffffcc;
 `;
 
 export default App;

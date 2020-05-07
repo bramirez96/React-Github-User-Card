@@ -15,6 +15,9 @@ class UserCard extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchFollowers();
+  }
+  fetchFollowers = () => {
     axios
       .get(this.state.user.followers)
       .then((res) => {
@@ -26,7 +29,7 @@ class UserCard extends React.Component {
         console.log(err);
       });
     // this.setState({ followers: followers });
-  }
+  };
 
   render() {
     const { name, bio, pic } = this.state.user;
@@ -39,7 +42,9 @@ class UserCard extends React.Component {
             <p>{bio}</p>
           </div>
         </div>
-        {this.state.followers && <FollowerList followers={this.state.followers} />}
+        {this.state.followers && (
+          <FollowerList followers={this.state.followers} setUrl={this.props.setUrl} />
+        )}
       </StyledCard>
     );
   }

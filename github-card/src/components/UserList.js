@@ -4,11 +4,11 @@ import styled from "styled-components";
 import UserCard from "./UserCard";
 
 const UserList = (props) => {
-  const { users } = props;
+  const { users, setUrl } = props;
   return (
     <StyledList>
       {users.map((user) => {
-        return <UserCard key={user.id} user={user} />;
+        return <UserCard key={user.id} user={user} setUrl={setUrl} />;
       })}
     </StyledList>
   );
