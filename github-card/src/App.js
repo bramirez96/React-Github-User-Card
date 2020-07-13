@@ -10,7 +10,7 @@ import { users } from "./assets/data.js";
 class App extends React.Component {
   state = {
     searchField: "",
-    url: "https://api.github.com/users/sadamexx",
+    url: "https://api.github.com/users/toendthepeace",
     users: null
   };
   componentDidMount() {
